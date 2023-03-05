@@ -18,7 +18,7 @@ console.log(person['большой ключ'])
 person.greet()
 
 person.age++
-person.languages.push('finish')
+person.languages.push('fin')
 person['key_4'] = undefined  // rename
 delete person['key_4']
 
@@ -45,5 +45,28 @@ Object.keys(person).forEach(key => {
     console.log('value', person[key])
 })
 
+
+// let arr1 = ['пн', 'вт', 'ср', 'чт', 'пт', 'сб', 'вс'];
+// let arr2 = [1, 2, 3, 4, 5, 6, 7];
+
+// let obj = {}    - заполнение обьекта из двух массивов
+// for(let i = 0; i<=7; i++){
+//     let keys = arr1[i]
+//     let values = arr2[i]
+//     obj[keys] = values
+// }
+// console.log(obj)
+
+// let obj = {a: 1, b: 2, c: 3, d: 4, e: 5}; // смена местами ключей и значений
+// let newObj = {}
+//     let keys = Object.values(obj)
+//     let values = Object.keys(obj)
+
+// for (let i =0; i<=5; i++){
+//     let key = keys[i]
+//     let value = values[i]
+//     newObj[key] = value
+// }
+// console.log(newObj)
 
 
