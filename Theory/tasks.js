@@ -367,130 +367,230 @@
 // }
 // console.log(newObj)
 
+// console.log(Math.pow(2,10))
+// console.log(Math.sqrt(245))
 
-//l', 'e', 'g' и 'a'.
-// let arr = [
-// 	['a', 'b', 'c'],
-// 	['d', 'e', 'f'],
-// 	['g', 'h', 'i'],
-// 	['j', 'k', 'l'],
-// ];
+// //Найдите квадратный корень из суммы кубов его элементов.
 
-// console.log(arr[3][2])
-// console.log(arr[1][1])
-// console.log(arr[2][0])
-// console.log(arr[0][0])
-
-// let arr = [[1, 2], [3, 4], [5, 6]];
-
-// let sum = arr[0][0] + arr[0][1] + arr[1][0] + arr[1][1] + arr[2][0] + arr[2][1]
-// console.log(sum)
-
-// let arr = [
-// 	[
-// 		[1, 2],
-// 		[3, 4],
-// 	],
-// 	[
-// 		[5, 6],
-// 		[7, 8],
-// 	],
-// ];
-
-// let sum = arr[0][0][0] + arr[0][0][1] + arr[0][1][0] + arr[0][1][1] + arr[1][0][0] + arr[1][0][1] + arr[1][1][0] + arr[1][1][1]
-// console.log(sum)
-
-// let arr = [[1, 2, 3, 4, 5], [6, 7, 8], [9, 10]];
-
-// for (let subArr of arr) {
-// 	for (let elem of subArr) {
-// 		console.log(elem);
-// 	}
-// }
-
-//С помощью вложенных циклов найдите сумму элементов этого массива.
-// let arr = [[1, 2, 3], [4, 5], [6]];
-//  let sum = 0
-// for (let i of arr){
-//     for (let j of i){
-//         sum+=j
-
-//     }
-// }
-// console.log(sum)
-
-// С помощью вложенных циклов найдите сумму элементов этого массива.
-// let arr = [[[1, 2], [3, 4]], [[5, 6], [7, 8]]];
+// let str = [4, 2, 5, 19, 13, 0, 10]
 // let sum = 0
 
-// for (let i of arr){
-//     for(let j of i){
-//         for( let k of j){
-//             sum += k
-//         }
+// for (let i = 0; i <= str.length-1; i++){  
+//     sum += Math.pow(i,3)
+// }
+// console.log(Math.sqrt(sum))
+
+// console.log(Math.min(4, -2, 5, 19, -130, 0, 10))
+// console.log(Math.max(4, -2, 5, 19, -130, 0, 10))
+// function getRandomInt(min,max){
+//     return Math.floor(Math.random()* (max-min + 1) + min)
+// }
+// //console.log(getRandomInt(1,100))
+
+// let arr = []
+
+// for( let i =0; i<=9; i++){
+//     arr[i] = getRandomInt(1,1000)
+// }
+
+// console.log(arr)
+
+
+// let str = 'js'
+// console.log(str.toUpperCase())
+
+//Вырежьте из нее слово 'учу' и слово 'javascript' тремя разными способами (через substr, substring, slice).
+
+// let str = 'я учу javascript!'
+// let learn = str.substring(2,5)
+// console.log(learn)
+// let study = str.substr(2,3)
+// console.log(study)
+// let learnt = str.slice(2,5)
+// console.log(learnt)
+
+// let str = 'abcdea'
+// console.log(str.indexOf('a', str.length))
+
+// let num = [1, 2, 3, 4, 5]
+// num.splice(1,2)
+// console.log(num)
+
+// let arr = [1, 2, 3, 4, 5]
+// arr.splice(2,0, 'a', 'b', 'c')
+// console.log(arr)
+
+// Давайте напишем код, который преобразует первую букву каждого слова в верхний регистр. Сразу приведу решение с комментариями:
+
+// let str = 'word1 word2 word3';
+
+// // Разобьем строку в массив слов:
+// let words = str.split(' ');
+
+// for (let i = 0; i < words.length; i++) {
+// 	// Увеличим регистр каждого слова:
+// 	words[i] = words[i].slice(0, 1).toUpperCase() + words[i].slice(1);
+// }
+
+// // Сольем массив обратно в строку:
+// let result = words.join(' ');
+// console.log(result); // выведет 'Word1 Word2 Word3'
+
+// Давайте перевернем символы этой строки в обратном порядке:
+
+// let str = '12345';
+// let result = str.split('').reverse().join('');
+
+// console.log(result); // выведет '54321'
+
+// function Qube(number){
+//     return Math.pow(number, 3)
+// }
+
+// let result = Qube(3)
+// console.log(result)
+
+// let result = number => Math.pow(number,3)
+// console.log(result(5))
+
+// function sqrt(num) {
+// 	return Math.sqrt(num);
+// }
+
+// function round(num) {
+// 	return num.toFixed(3);
+// }
+
+// let res = round(sqrt(2))
+// console.log(res)
+
+// function sqrt(num) {
+// 	return Math.sqrt(num);
+// }
+
+// function sum(num1, num2, num3) {
+// 	return num1 + num2 + num3;
+// }
+
+// function round(num) {
+// 	return num.toFixed(3);
+// }
+
+// let res = round(sum(sqrt(2), sqrt(3), sqrt(4)))
+// console.log(res)
+
+// function devision(number){
+//    let counter = 0 
+//    while (number > 10){ 
+//         number = number / 2
+//         counter++   
+//     } return counter
+// }
+// console.log(devision(800))
+
+// console.log(isPrime(13)); // должен вывести true
+
+// function isPrime(num) {
+// 	for (let i = 2; i < num; i++) {
+// 		return (num % i !== 0)
 //     }
 // }
-// console.log(sum)
 
-// заполнение массива   [[1, 2, 3], [1, 2, 3], [1, 2, 3]]
-// let arr = [];
 
-// for (let i = 0; i < 3; i++) {
-// 	arr[i] = []; // создаем пустые вложенные массивы
-	
-// 	for (let j = 0; j < 3; j++) {
-// 		arr[i].push(j + 1); // заполняем подмассив числами
+// let arr = [1, 2, 3, 4, 5]
+// let sum =0
+
+// function Sum(arr){
+// 	for (let i =0; i<=4; i++){
+// 		sum+= arr[i]
 // 	}
+// 	return sum
 // }
 
+// console.log(Sum(arr))
+
+// let str = 'Hello world'
+
+// function Change(str){
+// 	return firstLe
+// }
+// console.log(Change(str))
+
+// function func(arr) {
+// 	arr.slice(1, 1);
+// }
+
+// let arr = [1, 2, 3];
+// func(arr);
 // console.log(arr);
 
-// [[1, 2, 3, 4, 5], [1, 2, 3, 4, 5], [1, 2, 3, 4, 5]]
-
-// let arr = []
-
-// for (let i = 0; i <= 4; i++){
-//     arr[i] = []
-//     for(let j=0; j <= 4; j++){
-//         arr[i].push(j+1)
-//     }
-// }
-// console.log(arr)
-
-// let arr = []
-
-// for (let i = 0; i <=4; i++){
-//     arr[i] = []
-//     for (let j = 0; j<=4; j++){
-//         arr[i].push('x')
-//     }
+// function funck1(){
+// 	return 3
 // }
 
-// console.log(arr)
+// let funck2 = funck1
+// console.log(funck2())
+// console.log(funck1())
+// console.log(funck1() + funck2())
 
-
-// let arr = []
-
-// for (let i = 0; i <=4; i++){
-//     arr[i] = []
-//     for(let j = 0; j <=4; j++){
-//         arr[j] = []
-//         for(let k = 0; k <= 4; k++){
-//             arr[j].push(k+1)
-//         }
-//     }
+// let Pow = function(num, pow){
+// 	return Math.pow(num,pow)
 // }
 
-// console.log(arr)
+// console.log(Pow(10,3))
 
-//[[2, 4, 6], [8, 10, 12], [14, 16, 18], [20, 22, 24]]
-let arr = []
-let k = 2
+// let arr = [
+// 	function() {return(1)},
+// 	function() {return(2)},
+// 	function() {return(3)},
+// ]
 
-for (let i =0; i<=2; i++){
-    arr[i] = []
-    for (let j = 0; j<= 2; j++){
-        arr[i].push(k++)
-    }
-}
-console.log(arr)
+// console.log(arr[0]() + arr[1]() + arr[2]())
+// for(let funck = 0; funck<3; funck++){
+// 	console.log(arr[funck]())
+// }
+
+
+// let obj = {
+// 	func1: function() {return(1)},
+// 	func2: function() {return(2)},
+// 	func3: function() {return(3)},
+// };
+
+// console.log(obj.func1() + obj.func2() + obj.func3())
+
+// let math = {
+// 	square: function(num) {return num * num},
+// 	cube: function(num) {return num * num * num},
+// };
+
+// console.log( math.square(2) ); // выведет 4
+// console.log( math.cube(2) ); // выведет 8
+
+// function math(num1, num2){
+// 	function square(num){
+// 		return num*num
+// 	}
+// 	function qube(num){
+// 		return num ** 3
+// 	}
+
+// 	return square(num1) + qube(num2)
+// }
+
+// console.log(math(5,3))
+
+(function(num3) {
+	return function(num1) {
+		return function(num2){
+			console.log(num1+num2+num3);
+		}
+		
+	};
+})(4)(5)(4);
+
+let str = 5
+
+(function() {
+	console.log(1);
+})();

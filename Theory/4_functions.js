@@ -1,6 +1,9 @@
 //Function Declaration - можно обращаться когда захотим  
 //Функция - это обьект
 
+//интерпретатор вначале пробегается по всему документу с кодом и ищет все функции, объявленные как Function Declaration,
+//и только потом начинает выполнять код документа построчно.
+
 function greet(name){
     console.log('Привет - ', name)
 }
@@ -58,3 +61,56 @@ function createMember(name){
 }
 
 const logWithLastName = createMember('Alina')
+
+
+
+
+
+
+let arr = [
+	function() {console.log('1')},
+	function() {console.log('2')},
+	function() {console.log('3')},
+];
+//Давайте, например, выведем в консоль содержимое нулевого элемента массива:
+
+let array = [
+	function() {console.log('1')},
+	function() {console.log('2')},
+	function() {console.log('3')},
+];
+
+console.log(array[0]); // увидим исходный код первой функции
+
+//Чтобы происходил вызов функции, к ней нужно дописать круглые скобки. Так как наша функция хранится в arr[0], то круглые скобки нужно будет написать после квадратных, вот так: arr[0](). Проверим:
+
+let array1= [
+	function() {console.log('1')},
+	function() {console.log('2')},
+	function() {console.log('3')},
+];
+
+array1[0](); // выведет '1'
+//Можно также перебрать наш массив с функциями циклом и в этом цикле вызвать каждую из функций:
+
+let array2 = [
+	function() {console.log('1')},
+	function() {console.log('2')},
+	function() {console.log('3')},
+];
+
+for (let func of arr) {
+	func(); // вызываем наши функции в цикле
+}
+
+
+let arr3 = [
+	function() {return(1)},
+	function() {return(2)},
+	function() {return(3)},
+]
+
+console.log(arr3[0]() + arr3[1]() + arr3[2]())
+for(let funck = 0; funck<3; funck++){
+	console.log(arr[funck]())
+}

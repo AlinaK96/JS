@@ -70,3 +70,17 @@ Object.keys(person).forEach(key => {
 // console.log(newObj)
 
 
+
+let obj = {
+	func1: function() {console.log(1)},
+	func2: function() {console.log(2)},
+	func3: function() {console.log(3)},
+};
+
+let math = {
+	square: function(num) {return num * num},
+	cube: function(num) {return num * num * num},
+};
+
+console.log( math.square(2) ); // выведет 4
+console.log( math.cube(2) ); // выведет 8
